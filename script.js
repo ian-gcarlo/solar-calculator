@@ -57,10 +57,12 @@ document.addEventListener('DOMContentLoaded', () => {
         else if (provider === 'veco') rate = 11;
         else if (provider === 'dlsp') rate = 11.5;
         else if (provider === 'cepelco') rate = 11.2;
-        else rate = parseFloat(document.querySelector('#custom-kwh').value) || 0;
+        else rate = 13;
 
-        if (!usage || bill <= 0 || !provider || (provider === 'other' && rate <= 0)) {
-            alert("Please fill in all fields correctly.");
+
+        // Validation for "Other" rate input
+        if (provider === 'other' && rate <= 0) {
+            alert("Please enter a valid kWh rate for your provider.");
             return;
         }
 
@@ -115,8 +117,8 @@ document.addEventListener('DOMContentLoaded', () => {
      });
         // Function to close the message box
     const closeMessageBox = () => {
-        messageBox.classList.add('hidden');
-        overlay.classList.add('hidden');
+        messageBox.classList.remove('visible');
+        overlay.classList.remove('visible');
     };
 
     // Event listeners
