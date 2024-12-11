@@ -388,3 +388,9 @@ body {
 .dark-mode .message-box p {
     color: #000; /* Ensure paragraph text remains black */
 }
+.disclaimer{
+    margin: 10px;
+    width: 25%;
+    text-align: justify;
+    color: #757575;
+}
