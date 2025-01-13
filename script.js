@@ -53,10 +53,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const provider = document.querySelector('#electric-provider').value;
 
         let rate;
-        if (provider === 'meralco') rate = 13;
-        else if (provider === 'veco') rate = 11;
-        else if (provider === 'dlsp') rate = 11.5;
-        else if (provider === 'cepelco') rate = 11.2;
+        if (provider === 'meralco') rate = 11.96;
+        else if (provider === 'veco') rate = 11.51;
+        else if (provider === 'dlsp') rate = 9.21;
+        else if (provider === 'cepelco') rate = 13.19;
         else rate = 13;
 
 
