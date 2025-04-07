@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('calculator');
     const body = document.body;
     const usageTimeDropdown = document.querySelector('#usage-time');
-    const themeToggleButton = document.getElementById('theme-toggle');
 
     // Function to display the message box
     const showMessageBox = (recommendation, yieldMin, yieldMax, minim, maxim) => {
@@ -18,32 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
         messageBox.classList.add('visible');
         overlay.classList.add('visible');
     };
-
-    // Dark mode toggle button
-    if (localStorage.getItem('darkMode') === 'enabled') {
-        body.classList.add('dark-mode');
-        themeToggleButton.textContent = '🌙';
-    }
-
-    themeToggleButton.addEventListener('click', () => {
-        body.classList.toggle('dark-mode');
-        if (body.classList.contains('dark-mode')) {
-            themeToggleButton.textContent = '🌙';
-            localStorage.setItem('darkMode', 'enabled');
-        } else {
-            themeToggleButton.textContent = '☀️';
-            localStorage.setItem('darkMode', 'disabled');
-        }
-    });
-
-    // Dark mode based on dropdown
-    usageTimeDropdown.addEventListener('change', (event) => {
-        if (event.target.value === 'night') {
-            body.classList.add('dark-mode');
-        } else {
-            body.classList.remove('dark-mode');
-        }
-    });
 
     // Form submission event
     form.addEventListener('submit', function (event) {
