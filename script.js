@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
          // Calculate power and determine package recommendation
-         const power = bill / rate / 30 / 5;
+         const power = bill / rate / 30 / 4;
          let recommendation, yieldMin, yieldMax, minim, maxim;
  
          if (usage === 'day') {
@@ -48,48 +48,48 @@ document.addEventListener('DOMContentLoaded', () => {
                  recommendation = "We suggest IAN Smart Boost";
                  yieldMin = '288 kW';
                  yieldMax = '360 kW';
-                 minim = (((600 * 5 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 5 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 5 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 5 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              } else if (power > 3 && power <= 6.0) {
                  recommendation = "We suggest IAN Smart Power";
                  yieldMin = '576 kW';
                  yieldMax = '720 kW';
-                 minim = (((600 * 9 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 9 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 9 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 9 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              } 
              else if (power > 6 && power <= 11.0) {
                  recommendation = "We suggest IAN Smart Elite";
                  yieldMin = '1036 kW';
                  yieldMax = '1296 kW';
-                 minim = (((600 * 9 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 9 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 18 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 18 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              }
              else {
                  recommendation = "We suggest IAN Smart Ultra";
                  yieldMin = '1267 kW';
                  yieldMax = '1584 kW';
-                 minim = (((600 * 17 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 17 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 22 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 22 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              }
          } else {
              if (power <= 3) {
                  recommendation = "We suggest IAN Smart Boost Plus+";
                  yieldMin = '288 kW';
                  yieldMax = '360 kW';
-                 minim = (((600 * 5 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 5 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 5 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 5 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              } else if (power > 3 && power <= 6.0) {
                  recommendation = "We suggest IAN Smart Power Plus+";
                  yieldMin = '576 kW';
                  yieldMax = '720 kW';
-                 minim = (((600 * 10 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 10 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 10 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 10 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              } else {
                  recommendation = "We suggest IAN Smart Elite Plus+";
                  yieldMin = '1036 kW';
                  yieldMax = '1296 kW';
-                 minim = (((600 * 17 * 0.8 * 5 * 30) / 1000) * rate).toFixed(2);
-                 maxim = (((600 * 17 * 1 * 5 * 30) / 1000) * rate).toFixed(2);
+                 minim = (((600 * 18 * 0.8 * 4 * 30) / 1000) * rate).toFixed(2);
+                 maxim = (((600 * 18 * 1 * 4 * 30) / 1000) * rate).toFixed(2);
              }
          }
  
